@@ -1,7 +1,11 @@
 #!/bin/bash
 
 MY_MAC=$(echo "$(basename $0)"| sed "s/^cam_//" | sed "s/_wrapper.*//")
-SELF=$(readlink $0)
+if [[ $(uname) == "Darwin" ]]; then
+    SELF=$(readlink  $0) # /me hates bsd utils
+else
+    SELF=$(readlink -f $0)
+fi
 FFMPEG_PID=
 
 . "$(dirname $SELF)"/quidnunc.config

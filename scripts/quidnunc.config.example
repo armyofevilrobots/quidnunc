@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#SOURCEDIR="$(get_abs_filename $1)"
+#ARCHIVEDIR="$(get_abs_filename $2)"
+#UPLOADDIR="$(get_abs_filename $3)"
+SOURCEDIR=/var/lib/quidnunc/videos
+ARCHIVEDIR=/var/lib/quidnunc/archive
+UPLOADDIR=/var/lib/quidnunc/upload
+WRAPPERDIR=/opt/quidnunc/scripts
+PIDDIR=/var/run/quidnunc
+
+LSOF=/usr/sbin/lsof
+FACILITY=local3
+BUCKET=quidnunc-video
+#QUIDNUNC_EXPIRE_DELTA=1M #OSX
+QUIDNUNC_EXPIRE_DELTA="1 month" #Linux
+CAMERA_IP_RANGE=10.0.0.0/24
+CAMERA_DISCOVERY_FILE="$(dirname $0)"/discovery.csv
+FFMPEG=/Users/derek/workspace/quidnunc/root/bin/ffmpeg
+
+CAM_deadbeef0001_URI="rtsp://SOMEUSER:SOMEPASS@%IP%:554/videoMain"
+CAM_deadbeef0002_URI="rtsp://SOMEUSER:SOMEPASS@%IP%:554/videoMain"
+
