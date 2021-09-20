@@ -1,6 +1,8 @@
 # quidnunc
 
 quidnunc :  a person who seeks to know all the latest news or gossip :  busybody
+# ALSO: A PROJECT NOBODY IN THEIR RIGHT MIND SHOULD USE. IT'S ALL BASH FOR GOD'S SAKE!!!
+# Seriously, go look at Quidnunc2, which is sane.
 
 
 A gigantic mashup of technologies for eavesdropping on your neighbors...
